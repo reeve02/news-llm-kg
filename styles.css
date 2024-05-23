@@ -1,0 +1,37 @@
+/* styles.css */
+body {
+    background-color: #f0f2f6;
+    color: #333;
+}
+
+.sidebar .sidebar-content {
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+h1 {
+    color: #2c3e50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.stButton>button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.stButton>button:hover {
+    background-color: #0056b3;
+}
+
+.stSidebar .stSelectbox, .stSidebar .stTextArea {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
