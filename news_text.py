@@ -5,7 +5,6 @@ from langchain_openai import ChatOpenAI
 from scrapping_news import get_news
 import validators
 import streamlit as st
-import os
 
 OPENAI_API_KEY = st.secrets["openai_api_key"]
 
