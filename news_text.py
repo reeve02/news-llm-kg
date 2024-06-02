@@ -18,51 +18,48 @@ PROMPT_TEMPLATE1 = ChatPromptTemplate.from_messages(
             relasi antar entitas berisi relasi penting antara entitas dengan entitas lain atau relasi entitas dengan hal lain. 
             kutipan berisi hal yang dikatakan atau disebutkan secara langsung oleh sebuah individu. apabila tidak ada tidak perlu dituliskan.
             Berikut contoh berita dan hasil analisis berita yang diinginkan:
-            contoh berita: Pihak Universitas Gadjah Mada (UGM) buka suara soal kabar penolakan kehadiran capres nomor urut satu Anies Baswedan oleh pihak yang mengatasnamakan rektorat untuk menghadiri sebuah acara diskusi sebagai narasumber. Sekretaris UGM Andi Sandi Antonius mengatakan pihaknya saat ini masih melakukan penelusuran lebih lanjut. Pasalnya, Andi juga belum mengetahui pihak yang diklaim panitia mengaku sebagai 'rektorat tersebut. Ia mengacu pada tangkapan layar percakapan WhatsApp dengan nama kontak 'rektorat' yang viral di media sosial. "Menjadi aneh saya dapat kiriman katanya ada orang namanya Pak Wija pakai akun nama 'rektorat', sebenarnya saya mau tanya itu siapa," kata Andi saat dihubungi. "Menurut kami, yang sangat memojokkan UGM adalah dikatakan rektorat akan menolak. Nah siapa orang di rektorat itu saya sudah tanya ke bu rektor, saya tanya ke teman-teman wakil rektor ini tidak ada yang memberikan statement ini," sambungnya. Oleh karenanya, pihaknya belum bisa memberikan tanggapan lebih jauh mengenai kabar penolakan kedatangan Anies serta pembatalan acara ini. "Karena kalau dilaksanakan UGM kami kan sudah punya SOP biar bagaimanapun kita harus memisahkan ini dalam ranah kampanye atau tidak. Kalau ranah kampanye kita sudah punya SOP kami yang harus mengundang. UGM yang harus mengundang," tegasnya. Andi sendiri menekankan kampusnya sangat 'welcome' dengan kedatangan Anies, apalagi sebagai narasumber acara akademik. Dia menyebut UGM adalah rumah juga buat Anies yang merupakan alumnus universitas tersebut. Sebelumnya panitia acara diskusi yang bertajuk 'Indonesian Future Stadium Generale' itu mengklaim tak mendapatkan rekomendasi atau izin dari rektorat kampus untuk mengundang Anies sebagai narasumber. Panitia mengklaim rektorat mengancam akan membubarkan acara yang digelar di Auditorium MM UGM itu apabila mereka tetap mengundang capres dari Koalisi Perubahan tersebut. Acara diskusi yang digelar pada Jumat (17/11) mulai pukul 13.00 WIB itu diselenggarakan oleh lembaga swadaya masyarakat (LSM) Bersama Indonesia. Anies diundang dalam kapasitasnya sebagai Gubernur DKI Jakarta 2017-2022 membahas topik 'Finding Justice Development for the Future of Indonesia: Promoting Jakarta 'Kota Kolaborasi' as a Pioneer of Global Sharing City'. Public Affairs Bersama Indonesia Muhammad Khalid mengatakan nama Thomas Lembong diajukan sebagai pengganti setelah panitia tidak mendapatkan rekomendasi dari rektorat untuk menghadirkan Anies. "Ada satu rekomendasi dari pengelola tempat yang tentu saja kampus UGM, karena kita sifatnya menyewa tempat di sini. Rekomendasinya yaitu bahwa tidak menyarankan kehadiran tokoh ini, bapak Anies Baswedan karena dianggapnya melekat dengan unsur unsur politis di fase-fase saat ini," kata Khalid ditemui di Auditorium MM UGM. Berdasarkan pantauan di lokasi, kehadiran Anies sebagai narasumber digantikan Thomas Trikasih Lembong selaku menteri perdagangan 2015-2016 dan Kepala Badan Koordinasi Penanaman Modal (BKPM) 2016-2019. Thomas yang kini juga ditunjuk menjadi salah satu co-captain dalam Tim Nasional Pemenangan Anies Baswedan-Muhaimin Iskandar (Timnas AMIN) untuk Pilpres 2024, hadir secara daring dalam acara tersebut. Khalid menjelaskan, acara ini sudah terencana sejak dua pekan lalu dan mencantumkan nama Anies sebagai salah satu narasumbernya. Saat itu pihaknya berkoordinasi dengan pihak prodi MM FEB UGM selaku pengelola tempat dan tidak ada catatan apapun terkait acara. Khalid mengklaim kala itu semua sudah 'deal'. Khalid menjelaskan selebaran acara disebar melalui media sosial pada H-2. Namun, sehari berselang atau Kamis (16/11) petang, pengelola lokasi acara mengirimkan pesan terusan WhatsApp dari rektorat kepada panitia. Intinya agar Anies tidak dihadirkan sebagai narasumber. "Di situ ada redaksi (kalimat) bahwa apabila tetap memaksakan seperti itu akan ada aparat keamanan yang menertibkan acara ini atau dalam bahasa sederhananya dibubarkan," klaim Khalid. Khalid pun menunjukkan percakapan WhatsApp antara dirinya dengan seseorang bernama kontak 'rektorat' yang ia panggil dengan nama 'Pak Wija'. Isi percakapannya adalah meminta Khalid untuk memastikan kedatangan Anies. Selain itu ada anjuran rektor agar acara dibatalkan jika Anies tetap didatangkan. Kata dia, tangkapan layar percakapan ini sudah viral di media sosial X (Twitter). Khalid mengaku sudah menjelaskan konsep acara yang digelar pihaknya adalah yakni agar generasi muda melek dan terlibat dalam suatu proses kebijakan publik yang berorientasi pada keadilan sosial. Sehingga, tema sharing city dimaksudkan mendorong kota pembangunan yang berkeadilan. "Jadi bagaimana kita mengangkat praktik baik di Jakarta pada masa Anies Baswedan dulu adalah salah satu ide jangka panjang di masa depan yang desainnya itu akan didiskusikan dan diafirmasi oleh berbagai background juga. Ada praktisi. Jadi tujuan utamanya tentu saja itu, kehadiran pak Anies sebagai tokoh mantan gubernur, dulu yang memberikan legacy itu di Jakarta adalah satu nilai tambah," imbuhnya. Khalid mengatakan, pihaknya sudah berargumen bahwa acaranya murni diskusi akademik dan bukan wadah kampanye peserta Pilpres 2024. Namun, demi keberlangsungan acara pihaknya akhirnya mengalah. Poster acara yang rencananya dipasang di simpang empat MM FEB UGM ujung-ujungnya urung dipasang. "Dengan pertimbangan seperti itu, kami menganggap demi kebaikan bersama kita juga memilih menggantikan beliau dengan tadi bapak Thomas Trikasih Lembong," ucapnya.
+            contoh berita: Presiden Joko Widodo (Jokowi) dijadwalkan akan melantik Kepala Staf Angkatan Darat (KSAD) pada Rabu (29/11) di Istana Negara, Jakarta. Informasi itu dibenarkan oleh Ketua Komisi I DPR RI Meutya Hafid. "Ya betul (Jokowi lantik KSAD)," kata Meutya lewat pesan singkat, Selasa (28/11) malam. Namun demikian, Meutya belum memberitahu siapa perwira tinggi yang bakal mengisi kursi KSAD. Sebelumnya, salah satu yang disebut berpeluang besar menjadi KSAD adalah Panglima Komando Cadangan Strategis Angkatan Darat (Pangkostrad) Letjen Maruli Simanjuntak. Presiden Joko Widodo turut membenarkan Maruli merupakan satu dari sejumlah nama jenderal yang masuk dalam bursa KSAD. "Salah satu kandidat," kata Jokowi di Indonesia Arena, Jakarta, Sabtu (25/11). Posisi KSAD kosong setelah Jenderal Agus Subiyanto dilantik menjadi Panglima TNI. Agus sempat menjabat sebagai KSAD menggantikan Jenderal Dudung Abdurachman yang pensiun. Beberapa hari menjabat KSAD, Agus diusulkan Presiden Jokowi menjadi Panglima TNI. Ia baru dilantik pada pekan lalu
             contoh hasil analisis:
 
             Entitas:
-            - Universitas Gadjah Mada (UGM)
-            - Anies Baswedan
-            - Sekretaris UGM Andi Sandi Antonius
-            - Panitia 'Indonesian Future Stadium Generale'
-            - Muhammad Khalid (Public Affairs Bersama Indonesia)
-            - Thomas Trikasih Lembong
+            - Presiden Joko Widodo (Jokowi)
+            - Ketua Komisi I DPR RI Meutya Hafid
+            - Kepala Staf Angkatan Darat (KSAD)
+            - Panglima Komando Cadangan Strategis Angkatan Darat (Pangkostrad) Letjen Maruli Simanjuntak
+            - Jenderal Agus Subiyanto
+            - Jenderal Dudung Abdurachman
+            - Istana Negara, Jakarta
 
             Relasi Antarentitas:
-            - Anies Baswedan, ditolak hadir sebagai narasumber, oleh entitas yang mengaku 'rektorat' UGM
-            - UGM, diklaim menolak, Anies Baswedan
-            - Andi Sandi Antonius, mencari informasi tentang, 'rektorat'
-            - UGM, melakukan penelusuran, atas klaim penolakan Anies
-            - LSM Bersama Indonesia, menggantikan Anies dengan, Thomas Trikasih Lembong sebagai narasumber
+            - Presiden Joko Widodo, melantik, KSAD
+            - Meutya Hafid, mengkonfirmasi pelantikan, KSAD oleh Jokowi
+            - Letjen Maruli Simanjuntak, berpeluang menjadi, KSAD
+            - Jenderal Agus Subiyanto, diusulkan menjadi, Panglima TNI oleh Jokowi
+            - Jenderal Dudung Abdurachman, digantikan oleh, Jenderal Agus Subiyanto sebagai KSAD
 
             Sentimen:
-            - Negatif mengenai Kekeliruan dan penyesatan informasi terkait klaim penolakan Anies
+            - Positif terkait pelantikan KSAD baru oleh Presiden Jokowi
 
             Kutipan dalam Berita:
-            - ""Menjadi aneh saya dapat kiriman katanya ada orang namanya Pak Wija pakai akun nama 'rektorat', sebenarnya saya mau tanya itu siapa,"" - Andi Sandi Antonius
-            - ""Nah siapa orang di rektorat itu saya sudah tanya ke bu rektor, saya tanya ke teman-teman wakil rektor ini tidak ada yang memberikan statement ini,"" - Andi Sandi Antonius
-            - ""Kalau ranah kampanye kita sudah punya SOP kami yang harus mengundang. UGM yang harus mengundang,"" - Andi Sandi Antonius
-            - ""Ada satu rekomendasi dari pengelola tempat yang tentu saja kampus UGM, karena kita sifatnya menyewa tempat di sini. Rekomendasinya yaitu bahwa tidak menyarankan kehadiran tokoh ini, bapak Anies Baswedan karena dianggapnya melekat dengan unsur unsur politis di fase-fase saat ini,"" - Muhammad Khalid
-            - ""Di situ ada redaksi (kalimat) bahwa apabila tetap memaksakan seperti itu akan ada aparat keamanan yang menertibkan acara ini atau dalam bahasa sederhananya dibubarkan,"" - Muhammad Khalid
-            - ""Jadi bagaimana kita mengangkat praktik baik di Jakarta pada masa Anies Baswedan dulu adalah salah satu ide jangka panjang di masa depan yang desainnya itu akan didiskusikan dan diafirmasi oleh berbagai background juga. Ada praktisi,"" - Muhammad Khalid
+            - "Ya betul (Jokowi lantik KSAD)," - Meutya Hafid
+            - "Salah satu kandidat," - Presiden Joko Widodo
 
             5W1H:
-            - What: Penolakan Anies Baswedan hadir diskusi
-            - Who: UGM, Anies Baswedan, Andi Sandi Antonius, Muhammad Khalid, Thomas Trikasih Lembong
-            - When: Jumat, 17 November, mulai pukul 13.00 WIB
-            - Where: Auditorium MM UGM
-            - Why: Kekhawatiran atas unsur politis kehadiran Anies
-            - How: Penggantian narasumber, penyebaran informasi melalui WhatsApp
+            - What: Pelantikan Kepala Staf Angkatan Darat (KSAD)
+            - Who: Presiden Joko Widodo, Meutya Hafid, Letjen Maruli Simanjuntak, Jenderal Agus Subiyanto, Jenderal Dudung Abdurachman
+            - When: Rabu, 29 November
+            - Where: Istana Negara, Jakarta
+            - Why: Pengisian posisi KSAD yang kosong
+            - How: Pelantikan oleh Presiden Joko Widodo
 
             Urutan Kronologis Kejadian:
-            - Panitia merencanakan acara dan mengundang Anies sebagai narasumber.
-            - Panitia mendapat pesan dari 'rektorat' yang menyarankan agar Anies tidak dihadirkan.
-            - UGM, melalui Andi Sandi Antonius, menyatakan ketidakpastian tentang siapa di rektorat yang mengeluarkan penolakan.
-            - Muhammad Khalid mengumumkan Thomas Lembong sebagai pengganti Anies.
+            - Posisi KSAD kosong setelah Jenderal Agus Subiyanto dilantik menjadi Panglima TNI.
+            - Letjen Maruli Simanjuntak disebut sebagai salah satu kandidat KSAD oleh Presiden Jokowi.
+            - Ketua Komisi I DPR RI Meutya Hafid mengkonfirmasi bahwa Presiden Jokowi akan melantik KSAD.
+            - Pelantikan KSAD dijadwalkan pada Rabu, 29 November di Istana Negara, Jakarta.
 
             Hubungan Bagian-keseluruhan (Mereologi):
-            - 'Indonesian Future Stadium Generale', bagian dari, aktivitas akademik UGM
+            - KSAD, bagian dari, Angkatan Darat TNI
 
             Ekstrak informasi untuk berita berikut:
             berita:
@@ -87,169 +84,249 @@ PROMPT_TEMPLATE2 = ChatPromptTemplate.from_messages(
 
             # Nodes
 
-            ### Node ID: Maurits_Mantiri
-            **Label**: Wali Kota Bitung (Maurits Mantiri)
+            ### Node ID: Presiden_Joko_Widodo
+            **Label**: Presiden Joko Widodo (Jokowi)
             **Type**: Entity
             ---
 
-            ### Node ID: Pemerintah_Kota_Bitung
-            **Label**: Pemerintah Kota Bitung
+            ### Node ID: Ketua_Komisi_I_DPR_RI_Meutya_Hafid
+            **Label**: Ketua Komisi I DPR RI Meutya Hafid
             **Type**: Entity
             ---
 
-            ### Node ID: Ormas
-            **Label**: Ormas
+            ### Node ID: KSAD
+            **Label**: Kepala Staf Angkatan Darat (KSAD)
             **Type**: Entity
             ---
 
-            ### Node ID: Massa_Pro_Palestina
-            **Label**: Massa pro Palestina
+            ### Node ID: Panglima_Kostrad_Letjen_Maruli_Simanjuntak
+            **Label**: Panglima Komando Cadangan Strategis Angkatan Darat (Pangkostrad) Letjen Maruli Simanjuntak
             **Type**: Entity
             ---
 
-            ### Node ID: Bentrokan
-            **Label**: Bentrokan
+            ### Node ID: Jenderal_Agus_Subiyanto
+            **Label**: Jenderal Agus Subiyanto
             **Type**: Entity
             ---
 
-            ### Node ID: Kapolda_Sulut_Irjen_Setyo_Budiyanto
-            **Label**: Kapolda Sulawesi Utara (Irjen Setyo Budiyanto)
+            ### Node ID: Jenderal_Dudung_Abdurachman
+            **Label**: Jenderal Dudung Abdurachman
             **Type**: Entity
             ---
 
-            ### Node ID: TNI_Polri
-            **Label**: TNI/Polri
+            ### Node ID: Istana_Negara_Jakarta
+            **Label**: Istana Negara, Jakarta
+            **Type**: Entity
+            ---
+
+            ### Node ID: Angkatan_Darat_TNI
+            **Label**: Angkatan Darat TNI
             **Type**: Entity
             ---
 
             ### Node ID: Sentimen_Positif
-            **Label**: Positif: upaya mendamaikan dan mengembalikan ketertiban yang terhubung massa pro palestina
+            **Label**: Positif terkait pelantikan KSAD baru oleh Presiden Jokowi
             **Type**: Sentiment
             ---
 
-            ### Node ID: Kutipan_Kondusif
-            **Label**: Saat ini, pusat Kota Bitung dalam keadaan kondusif dan aman terkendali,
+            ### Node ID: Kutipan_Meutya_Hafid_1
+            **Label**: "Ya betul (Jokowi lantik KSAD)," - Meutya Hafid
+            **Type**: Quotes
+            ---
+
+            ### Node ID: Kutipan_Jokowi_1
+            **Label**: "Salah satu kandidat," - Presiden Joko Widodo
             **Type**: Quotes
             ---
 
             ### Node ID: What
-            **Label**: Bentrokan antara ormas dengan massa pro Palestina
-            **Type**: 5W1H
-            ---
-
-            ### Node ID: Who
-            **Label**: Yang Terlibat
+            **Label**: Pelantikan Kepala Staf Angkatan Darat (KSAD)
             **Type**: 5W1H
             ---
 
             ### Node ID: When
-            **Label**: Sabtu 25 November
+            **Label**: Rabu, 29 November
             **Type**: 5W1H
             ---
 
             ### Node ID: Where
-            **Label**: Kota Bitung, Sulawesi Utara
+            **Label**: Istana Negara, Jakarta
             **Type**: 5W1H
             ---
 
             ### Node ID: Why
-            **Label**: Perbedaan pendapat dan partisipasi dalam aksi
+            **Label**: Pengisian posisi KSAD yang kosong
             **Type**: 5W1H
             ---
 
             ### Node ID: How
-            **Label**: Aparat gabungan TNI-Polri meredam situasi
+            **Label**: Pelantikan dilakukan dengan upacara resmi oleh Presiden Joko Widodo di Istana Negara, Jakarta, dengan kehadiran pejabat tinggi negara
+            **Type**: 5W1H
+            ---
+
+            ### Node ID: Who
+            **Label**: Presiden Joko Widodo (Jokowi), Ketua Komisi I DPR RI Meutya Hafid, Kepala Staf Angkatan Darat (KSAD), Panglima Komando Cadangan Strategis Angkatan Darat (Pangkostrad) Letjen Maruli Simanjuntak, Jenderal Agus Subiyanto, Jenderal Dudung Abdurachman, Istana Negara, Jakarta
             **Type**: 5W1H
             ---
 
             ### Node ID: Kronologi1
-            **Label**: Terjadi bentrokan antara dua kelompok ormas
+            **Label**: Posisi KSAD kosong setelah Jenderal Agus Subiyanto dilantik menjadi Panglima TNI.
             **Type**: Chronology
             ---
 
             ### Node ID: Kronologi2
-            **Label**: TNI/Polri turun tangan meredam kericuhan
+            **Label**: Letjen Maruli Simanjuntak disebut sebagai salah satu kandidat KSAD oleh Presiden Jokowi.
             **Type**: Chronology
             ---
 
             ### Node ID: Kronologi3
-            **Label**: Wali Kota Bitung menyatakan situasi sudah kondusif
+            **Label**: Ketua Komisi I DPR RI Meutya Hafid mengkonfirmasi bahwa Presiden Jokowi akan melantik KSAD.
+            **Type**: Chronology
+            ---
+
+            ### Node ID: Kronologi4
+            **Label**: Pelantikan KSAD dijadwalkan pada Rabu, 29 November di Istana Negara, Jakarta.
             **Type**: Chronology
             ---
 
             # Edges
 
-            **Source**: Ormas
-            **Target**: Massa_Pro_Palestina
-            **Label**: terlibat dalam bentrokan dengan
+            **Source**: What
+            **Target**: KSAD
+            **Label**: Berhubungan dengan
             ---
 
-            **Source**: Pemerintah_Kota_Bitung
-            **Target**: TNI_Polri
-            **Label**: bekerja sama dengan
+            **Source**: What
+            **Target**: Presiden_Joko_Widodo
+            **Label**: Berhubungan dengan
             ---
 
-            **Source**: Maurits_Mantiri
-            **Target**: Kota_Bitung
-            **Label**: menyatakan kondusif
+            **Source**: What
+            **Target**: Ketua_Komisi_I_DPR_RI_Meutya_Hafid
+            **Label**: Berhubungan dengan
             ---
 
-            **Source**: Pemerintah_Kota_Bitung
-            **Target**: Sentimen_Positif
-            **Label**: Sentimen
+            **Source**: What
+            **Target**: Panglima_Kostrad_Letjen_Maruli_Simanjuntak
+            **Label**: Berhubungan dengan
             ---
 
-            **Source**: Maurits_Mantiri
-            **Target**: Kutipan_Kondusif
-            **Label**: menyatakan
+            **Source**: What
+            **Target**: Jenderal_Agus_Subiyanto
+            **Label**: Berhubungan dengan
             ---
 
-            **Source**: Bentrokan
-            **Target**: What
-            **Label**: Apa Yang Terjadi
+            **Source**: What
+            **Target**: Jenderal_Dudung_Abdurachman
+            **Label**: Berhubungan dengan
             ---
 
-            **Source**: Who
-            **Target**: Ormas
-            **Label**: Siapa
-            ---
-
-            **Source**: Who
-            **Target**: Massa_Pro_Palestina
-            **Label**: Siapa
-            ---
-
-            **Source**: Who
-            **Target**: TNI_Polri
-            **Label**: Siapa
-            ---
-
-            **Source**: Who
-            **Target**: Pemerintah_Kota_Bitung
-            **Label**: Siapa
-            ---
-
-            **Source**: Bentrokan
+            **Source**: What
             **Target**: When
             **Label**: Kapan
             ---
 
-            **Source**: Bentrokan
+            **Source**: What
             **Target**: Where
-            **Label**: Di mana
+            **Label**: Dimana
             ---
 
-            **Source**: Bentrokan
+            **Source**: What
             **Target**: Why
             **Label**: Mengapa
             ---
 
-            **Source**: Bentrokan
+            **Source**: What
             **Target**: How
-            **Label**: Bagaimana terjadinya
+            **Label**: Bagaimana
             ---
 
-            **Source**: Bentrokan
+            **Source**: What
+            **Target**: Who
+            **Label**: Siapa
+            ---
+
+            **Source**: Who
+            **Target**: Presiden_Joko_Widodo
+            **Label**: Terkait
+            ---
+
+            **Source**: Who
+            **Target**: Ketua_Komisi_I_DPR_RI_Meutya_Hafid
+            **Label**: Terkait
+            ---
+
+            **Source**: Who
+            **Target**: KSAD
+            **Label**: Terkait
+            ---
+
+            **Source**: Who
+            **Target**: Panglima_Kostrad_Letjen_Maruli_Simanjuntak
+            **Label**: Terkait
+            ---
+
+            **Source**: Who
+            **Target**: Jenderal_Agus_Subiyanto
+            **Label**: Terkait
+            ---
+
+            **Source**: Who
+            **Target**: Jenderal_Dudung_Abdurachman
+            **Label**: Terkait
+            ---
+
+            **Source**: Who
+            **Target**: Istana_Negara_Jakarta
+            **Label**: Terkait
+            ---
+
+            **Source**: KSAD
+            **Target**: Angkatan_Darat_TNI
+            **Label**: bagian dari
+            ---
+
+            **Source**: Presiden_Joko_Widodo
+            **Target**: KSAD
+            **Label**: melantik
+            ---
+
+            **Source**: Ketua_Komisi_I_DPR_RI_Meutya_Hafid
+            **Target**: KSAD
+            **Label**: mengkonfirmasi pelantikan oleh Jokowi
+            ---
+
+            **Source**: Panglima_Kostrad_Letjen_Maruli_Simanjuntak
+            **Target**: KSAD
+            **Label**: berpeluang menjadi
+            ---
+
+            **Source**: Jenderal_Agus_Subiyanto
+            **Target**: Panglima_TNI
+            **Label**: diusulkan menjadi oleh Jokowi
+            ---
+
+            **Source**: Jenderal_Dudung_Abdurachman
+            **Target**: Jenderal_Agus_Subiyanto
+            **Label**: digantikan oleh sebagai KSAD
+            ---
+
+            **Source**: Sentimen_Positif
+            **Target**: Presiden_Joko_Widodo
+            **Label**: Sentimen
+            ---
+
+            **Source**: Kutipan_Meutya_Hafid_1
+            **Target**: Ketua_Komisi_I_DPR_RI_Meutya_Hafid
+            **Label**: Pernyataan
+            ---
+
+            **Source**: Kutipan_Jokowi_1
+            **Target**: Presiden_Joko_Widodo
+            **Label**: Pernyataan
+            ---
+
+            **Source**: How
             **Target**: Kronologi1
             **Label**: Dimulai dengan
             ---
@@ -261,22 +338,12 @@ PROMPT_TEMPLATE2 = ChatPromptTemplate.from_messages(
 
             **Source**: Kronologi2
             **Target**: Kronologi3
+            **Label**: Dilanjutkan dengan
+            ---
+
+            **Source**: Kronologi3
+            **Target**: Kronologi4
             **Label**: Berakhir dengan
-            ---
-
-            **Source**: Bentrokan
-            **Target**: Pemerintah_Kota_Bitung
-            **Label**: Merupakan bagian dari tantangan keamanan bagi
-            ---
-
-            **Source**: Maurits_Mantiri
-            **Target**: Pemerintah_Kota_Bitung
-            **Label**: Merupakan bagian dari
-            ---
-
-            **Source**: Kapolda_Sulut_Irjen_Setyo_Budiyanto
-            **Target**: TNI_Polri
-            **Label**: Merupakan bagian dari
             ---
 
             Berikanlah struktur markdown yang mencakup nodes dan edges. Nodes harus mencakup:
