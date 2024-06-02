@@ -35,3 +35,7 @@ h1 {
     padding: 10px;
     font-size: 14px;
 }
+
+div[data-testid="InputInstructions"] > span:nth-child(1) {
+    visibility: hidden;
+}

@@ -14,11 +14,9 @@ PROMPT_TEMPLATE1 = ChatPromptTemplate.from_messages(
         SystemMessage(
             content="""
             You are an assistant that helps to analyze news articles.
-            Berikan semua entitas, relasi antar entitas, sentimen, kutipan dalam berita, unsur 5w1h, urutan kronologis kejadian, dan kategori usia merupakan hal penting yang dibahas dan bersifat unik. 
+            Berikan semua entitas, relasi antar entitas, sentimen, kutipan dalam berita, unsur 5w1h, urutan kronologis kejadian, dan mereologi atau hubungan part-whole merupakan hal penting yang dibahas dan bersifat unik. 
             relasi antar entitas berisi relasi penting antara entitas dengan entitas lain atau relasi entitas dengan hal lain. 
             kutipan berisi hal yang dikatakan atau disebutkan secara langsung oleh sebuah individu. apabila tidak ada tidak perlu dituliskan.
-            Berita termasuk kategori dewasa jika mengandung unsur kekerasan, konten seksual, penggunaan obat terlarang, dan bahasa kasar. Jika tidak mengandung unsur tersebut, berita dapat dikategorikan sebagai "Semua umur"
-            cukup berikan informasi yang penting dan memudahkan pengguna dalam memahami berita.
             Berikut contoh berita dan hasil analisis berita yang diinginkan:
             contoh berita: Pihak Universitas Gadjah Mada (UGM) buka suara soal kabar penolakan kehadiran capres nomor urut satu Anies Baswedan oleh pihak yang mengatasnamakan rektorat untuk menghadiri sebuah acara diskusi sebagai narasumber. Sekretaris UGM Andi Sandi Antonius mengatakan pihaknya saat ini masih melakukan penelusuran lebih lanjut. Pasalnya, Andi juga belum mengetahui pihak yang diklaim panitia mengaku sebagai 'rektorat tersebut. Ia mengacu pada tangkapan layar percakapan WhatsApp dengan nama kontak 'rektorat' yang viral di media sosial. "Menjadi aneh saya dapat kiriman katanya ada orang namanya Pak Wija pakai akun nama 'rektorat', sebenarnya saya mau tanya itu siapa," kata Andi saat dihubungi. "Menurut kami, yang sangat memojokkan UGM adalah dikatakan rektorat akan menolak. Nah siapa orang di rektorat itu saya sudah tanya ke bu rektor, saya tanya ke teman-teman wakil rektor ini tidak ada yang memberikan statement ini," sambungnya. Oleh karenanya, pihaknya belum bisa memberikan tanggapan lebih jauh mengenai kabar penolakan kedatangan Anies serta pembatalan acara ini. "Karena kalau dilaksanakan UGM kami kan sudah punya SOP biar bagaimanapun kita harus memisahkan ini dalam ranah kampanye atau tidak. Kalau ranah kampanye kita sudah punya SOP kami yang harus mengundang. UGM yang harus mengundang," tegasnya. Andi sendiri menekankan kampusnya sangat 'welcome' dengan kedatangan Anies, apalagi sebagai narasumber acara akademik. Dia menyebut UGM adalah rumah juga buat Anies yang merupakan alumnus universitas tersebut. Sebelumnya panitia acara diskusi yang bertajuk 'Indonesian Future Stadium Generale' itu mengklaim tak mendapatkan rekomendasi atau izin dari rektorat kampus untuk mengundang Anies sebagai narasumber. Panitia mengklaim rektorat mengancam akan membubarkan acara yang digelar di Auditorium MM UGM itu apabila mereka tetap mengundang capres dari Koalisi Perubahan tersebut. Acara diskusi yang digelar pada Jumat (17/11) mulai pukul 13.00 WIB itu diselenggarakan oleh lembaga swadaya masyarakat (LSM) Bersama Indonesia. Anies diundang dalam kapasitasnya sebagai Gubernur DKI Jakarta 2017-2022 membahas topik 'Finding Justice Development for the Future of Indonesia: Promoting Jakarta 'Kota Kolaborasi' as a Pioneer of Global Sharing City'. Public Affairs Bersama Indonesia Muhammad Khalid mengatakan nama Thomas Lembong diajukan sebagai pengganti setelah panitia tidak mendapatkan rekomendasi dari rektorat untuk menghadirkan Anies. "Ada satu rekomendasi dari pengelola tempat yang tentu saja kampus UGM, karena kita sifatnya menyewa tempat di sini. Rekomendasinya yaitu bahwa tidak menyarankan kehadiran tokoh ini, bapak Anies Baswedan karena dianggapnya melekat dengan unsur unsur politis di fase-fase saat ini," kata Khalid ditemui di Auditorium MM UGM. Berdasarkan pantauan di lokasi, kehadiran Anies sebagai narasumber digantikan Thomas Trikasih Lembong selaku menteri perdagangan 2015-2016 dan Kepala Badan Koordinasi Penanaman Modal (BKPM) 2016-2019. Thomas yang kini juga ditunjuk menjadi salah satu co-captain dalam Tim Nasional Pemenangan Anies Baswedan-Muhaimin Iskandar (Timnas AMIN) untuk Pilpres 2024, hadir secara daring dalam acara tersebut. Khalid menjelaskan, acara ini sudah terencana sejak dua pekan lalu dan mencantumkan nama Anies sebagai salah satu narasumbernya. Saat itu pihaknya berkoordinasi dengan pihak prodi MM FEB UGM selaku pengelola tempat dan tidak ada catatan apapun terkait acara. Khalid mengklaim kala itu semua sudah 'deal'. Khalid menjelaskan selebaran acara disebar melalui media sosial pada H-2. Namun, sehari berselang atau Kamis (16/11) petang, pengelola lokasi acara mengirimkan pesan terusan WhatsApp dari rektorat kepada panitia. Intinya agar Anies tidak dihadirkan sebagai narasumber. "Di situ ada redaksi (kalimat) bahwa apabila tetap memaksakan seperti itu akan ada aparat keamanan yang menertibkan acara ini atau dalam bahasa sederhananya dibubarkan," klaim Khalid. Khalid pun menunjukkan percakapan WhatsApp antara dirinya dengan seseorang bernama kontak 'rektorat' yang ia panggil dengan nama 'Pak Wija'. Isi percakapannya adalah meminta Khalid untuk memastikan kedatangan Anies. Selain itu ada anjuran rektor agar acara dibatalkan jika Anies tetap didatangkan. Kata dia, tangkapan layar percakapan ini sudah viral di media sosial X (Twitter). Khalid mengaku sudah menjelaskan konsep acara yang digelar pihaknya adalah yakni agar generasi muda melek dan terlibat dalam suatu proses kebijakan publik yang berorientasi pada keadilan sosial. Sehingga, tema sharing city dimaksudkan mendorong kota pembangunan yang berkeadilan. "Jadi bagaimana kita mengangkat praktik baik di Jakarta pada masa Anies Baswedan dulu adalah salah satu ide jangka panjang di masa depan yang desainnya itu akan didiskusikan dan diafirmasi oleh berbagai background juga. Ada praktisi. Jadi tujuan utamanya tentu saja itu, kehadiran pak Anies sebagai tokoh mantan gubernur, dulu yang memberikan legacy itu di Jakarta adalah satu nilai tambah," imbuhnya. Khalid mengatakan, pihaknya sudah berargumen bahwa acaranya murni diskusi akademik dan bukan wadah kampanye peserta Pilpres 2024. Namun, demi keberlangsungan acara pihaknya akhirnya mengalah. Poster acara yang rencananya dipasang di simpang empat MM FEB UGM ujung-ujungnya urung dipasang. "Dengan pertimbangan seperti itu, kami menganggap demi kebaikan bersama kita juga memilih menggantikan beliau dengan tadi bapak Thomas Trikasih Lembong," ucapnya.
             contoh hasil analisis:
@@ -63,10 +61,11 @@ PROMPT_TEMPLATE1 = ChatPromptTemplate.from_messages(
             - UGM, melalui Andi Sandi Antonius, menyatakan ketidakpastian tentang siapa di rektorat yang mengeluarkan penolakan.
             - Muhammad Khalid mengumumkan Thomas Lembong sebagai pengganti Anies.
 
-            Kategori Usia:
-            - Semua Umur, Berita tidak mengandung kekerasan atau yang melanggar hukum
+            Hubungan Bagian-keseluruhan (Mereologi):
+            - 'Indonesian Future Stadium Generale', bagian dari, aktivitas akademik UGM
 
-            Berikut berita yang perlu dianalisis:
+            Ekstrak informasi untuk berita berikut:
+            berita:
             """
         ),
         HumanMessagePromptTemplate.from_template("{context}"),
@@ -212,22 +211,22 @@ PROMPT_TEMPLATE2 = ChatPromptTemplate.from_messages(
 
             **Source**: Who
             **Target**: Ormas
-            **Label**: Siapa Yang Terlibat
+            **Label**: Siapa
             ---
 
             **Source**: Who
             **Target**: Massa_Pro_Palestina
-            **Label**: Siapa Yang Terlibat
+            **Label**: Siapa
             ---
 
             **Source**: Who
             **Target**: TNI_Polri
-            **Label**: Siapa Yang Terlibat
+            **Label**: Siapa
             ---
 
             **Source**: Who
             **Target**: Pemerintah_Kota_Bitung
-            **Label**: Siapa Yang Terlibat
+            **Label**: Siapa
             ---
 
             **Source**: Bentrokan
@@ -237,7 +236,7 @@ PROMPT_TEMPLATE2 = ChatPromptTemplate.from_messages(
 
             **Source**: Bentrokan
             **Target**: Where
-            **Label**: Dimana
+            **Label**: Di mana
             ---
 
             **Source**: Bentrokan

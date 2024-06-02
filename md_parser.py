@@ -27,10 +27,8 @@ def parse_markdown(markdown_content):
             node_color = 'green'
         elif node_type == 'Chronology':
             node_color = 'black'
-        elif node_type == 'Age':
-            node_color = 'grey'
         else:
-            node_color = 'grey'
+            node_color = 'blue'
 
         node_size = 20 
 

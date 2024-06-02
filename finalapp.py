@@ -2,15 +2,25 @@ import streamlit as st
 from streamlit_agraph import agraph, Node, Edge, Config
 from md_parser import parse_markdown
 from news_text import process_news, process_link
+from PIL import Image
 
-st.set_page_config(layout="wide")
+im = Image.open("kg-llm.ico")
+
+st.set_page_config(
+    page_title="news-llm-kg",
+    page_icon=im,
+    layout="wide",
+)
 
 # memuat CSS untuk styling
 with open("styles.css", "r") as f:
     styles = f.read()
 st.markdown(f"<style>{styles}</style>", unsafe_allow_html=True)
 
-st.title("Knowledge Graph Berita")
+st.markdown("Masukkan input teks atau link berita pada area sidebar", help="Sidebar pada perangkat mobile dapat dibuka dengan mengklik tanda panah kanan \(>\) di pojok kiri atas halaman")
+
+st.sidebar.title("👩‍💻Knowledge Graph Berita")
+st.sidebar.markdown("Pastikan link berita termasuk dalam daftar link yang didukung", help="List berita yang didukung:\n- CNBC Indonesia\n- Liputan6\n- Narasi.tv\n- Antara News\n- CNN Indonesia\n- Detik.com\n- Kompas")
 
 input_option = st.sidebar.selectbox(
     "Pilih opsi input berita:",
@@ -23,7 +33,7 @@ input_data = None
 if input_option == "Masukkan teks berita":
     input_data = st.sidebar.text_area("Masukkan teks berita:", key="text_input")
 elif input_option == "Masukkan link berita":
-    input_data = st.sidebar.text_input("Masukkan link berita:", key="link_input")
+    input_data = st.sidebar.text_area("Masukkan link berita:", key="link_input")
 
 
 def load_data(input_data):
@@ -45,7 +55,7 @@ def load_data(input_data):
                 return None, None
             return list_result, parsed_data
         except TypeError:
-            st.error("Error: Could not process the news link.")
+            st.error("Error: Tidak dapat memproses link berita.")
             return None, None
 
 submit_button = st.sidebar.button("Submit Berita")
@@ -63,9 +73,9 @@ if submit_button and input_data:
             st.session_state.nodes = loaded_nodes
             st.session_state.edges = loaded_edges
     except ValueError as e:
-        st.error(f"Link yang dimasukkan tidak termasuk dalam daftar link yang didukung, tolong masukkan link portal berita indonesia yang didukung")
+        st.error(f"Berita tidak dapat diproses, mohon cek kembali input Anda dan pastikan link berita termasuk dalam daftar link yang didukung")
     except Exception as e:
-        st.error(f"Terjadi kesalahan, mohon cek kembali input anda")
+        st.error(f"Berita tidak dapat diproses, mohon cek kembali input Anda")
 
 # Memastikan variabel session state terinisialisasi
 if 'original_nodes' not in st.session_state:
@@ -76,7 +86,7 @@ if 'list_result' not in st.session_state:
     st.session_state.list_result = []
 
 # Fungsi untuk menghapus data
-if st.button("Clear Data"):
+if st.button("Hapus Data"):
     # Menghapus data dengan menghapus keys dari session state
     for key in ['nodes', 'edges', 'original_nodes', 'original_edges']:
         if key in st.session_state:
@@ -85,7 +95,7 @@ if st.button("Clear Data"):
 
 # Opsi pemilihan entitas untuk difokuskan
 node_options = [node.label for node in st.session_state.get('original_nodes', []) if isinstance(node, Node) and node.color is None]
-selected_nodes = st.multiselect("Pilih entitas untuk difokuskan", node_options)
+selected_nodes = st.sidebar.multiselect("Pilih entitas untuk difokuskan", node_options)
 
 # Membuat mapping warna ke tipe informasi node
 color_to_type = {
@@ -93,7 +103,6 @@ color_to_type = {
     "yellow": "Sentimen",
     "green": "5W1H",
     "black": "Kronologi",
-    "grey": "Kategori usia",
     None: "Entitas"
 }
 
@@ -106,7 +115,7 @@ all_node_types = list(set(color_to_type.get(node.color, "Other") for node in st.
 if selected_nodes:
     selected_node_ids = [node.id for node in st.session_state.original_nodes if node.label in selected_nodes]
     
-    # Mengumpulkan edge yang terhubung ke salah entity yang dipilih
+    # Mengumpulkan edge yang terhubung ke entity yang dipilih
     filtered_edges = [edge for edge in st.session_state.original_edges if edge.source in selected_node_ids or edge.to in selected_node_ids]
     
     # Mengumpulkan semua ID node dari edge yang terhubung
