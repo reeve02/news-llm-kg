@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_agraph import agraph, Node, Edge, Config
 from md_parser import parse_markdown
 from news_text import process_news, process_link
+from rdf_convert import md_rdf
 from PIL import Image
 
 im = Image.open("kg-llm.ico")
@@ -11,6 +12,14 @@ st.set_page_config(
     page_icon=im,
     layout="wide",
 )
+
+# Inisialisasi session state
+if 'md_result' not in st.session_state:
+    st.session_state.md_result = None
+if 'rdf_data' not in st.session_state:
+    st.session_state.rdf_data = None
+if 'show_rdf_button' not in st.session_state:
+    st.session_state.show_rdf_button = False
 
 # memuat CSS untuk styling
 with open("styles.css", "r") as f:
@@ -24,7 +33,8 @@ st.sidebar.markdown("Pastikan link berita termasuk dalam daftar link yang diduku
 
 input_option = st.sidebar.selectbox(
     "Pilih opsi input berita:",
-    ["Masukkan teks berita", "Masukkan link berita"],
+    ["Masukkan teks berita", "Masukkan link berita", 
+     "Masukkan Markdown Hasil Ekstraksi Sebelumnya"],
     key="input_option_selectbox"
 )
 
@@ -34,17 +44,18 @@ if input_option == "Masukkan teks berita":
     input_data = st.sidebar.text_area("Masukkan teks berita:", key="text_input")
 elif input_option == "Masukkan link berita":
     input_data = st.sidebar.text_area("Masukkan link berita:", key="link_input")
-
+elif input_option == "Masukkan Markdown Hasil Ekstraksi Sebelumnya":
+    input_data = st.sidebar.text_area("Masukkan Markdown Triplet:", key="md_input")
 
 def load_data(input_data):
     if input_option == "Masukkan teks berita":
-        list_result, md_result  = process_news(input_data)
+        list_result, md_result = process_news(input_data)
         try:
             parsed_data = parse_markdown(md_result)
         except Exception as e:
             st.error(f"Error parsing data: {e}")
-            return None, None
-        return list_result, parsed_data
+            return None, None, None
+        return list_result, parsed_data, md_result
     elif input_option == "Masukkan link berita":
         try:
             list_result, md_result = process_link(input_data)
@@ -52,17 +63,29 @@ def load_data(input_data):
                 parsed_data = parse_markdown(md_result)
             except Exception as e:
                 st.error(f"Error parsing data: {e}")
-                return None, None
-            return list_result, parsed_data
+                return None, None, None
+            return list_result, parsed_data, md_result
         except TypeError:
             st.error("Error: Tidak dapat memproses link berita.")
-            return None, None
+            return None, None, None
+    elif input_option == "Masukkan Markdown Hasil Ekstraksi Sebelumnya":
+        if input_data:
+            try:
+                # Menggunakan input_data langsung karena sudah dalam format teks
+                parsed_data = parse_markdown(input_data)
+                if parsed_data:
+                    return None, parsed_data, input_data
+                else:
+                    print("parse_markdown returned None")
+            except Exception as e:
+                st.error(f"Error parsing data: {e}")
+                return None, None, None
 
 submit_button = st.sidebar.button("Submit Berita")
 
 if submit_button and input_data:
     try:
-        list_result, data = load_data(input_data)
+        list_result, data, md_result = load_data(input_data)
         if data is None:
             st.error("Failed to load data. Please check the input and try again.")
         else:
@@ -72,10 +95,49 @@ if submit_button and input_data:
             st.session_state.original_edges = loaded_edges
             st.session_state.nodes = loaded_nodes
             st.session_state.edges = loaded_edges
+            st.session_state.md_result = md_result
+            
     except ValueError as e:
         st.error(f"Berita tidak dapat diproses, mohon cek kembali input Anda dan pastikan link berita termasuk dalam daftar link yang didukung")
     except Exception as e:
-        st.error(f"Berita tidak dapat diproses, mohon cek kembali input Anda")
+        st.error(f"Terjadi error, mohon cek kembali input Anda, error {e}")
+
+# Fungsi untuk menampilkan tombol unduh hasil ekstraksi dalam format Markdown
+@st.experimental_fragment
+def show_markdown_download():
+    if st.session_state.md_result:
+        st.download_button(
+            label="Unduh Hasil Markdown",
+            data=st.session_state.md_result,
+            file_name="extracted_triplets.md",
+            mime='text/markdown'
+        )
+
+# Fungsi untuk menampilkan tombol unduh hasil ekstraksi dalam format RDF
+@st.experimental_fragment
+def show_rdf_download():
+    if st.session_state.rdf_data:
+        st.download_button(
+            label="Unduh Hasil dalam Format RDF Turtle",
+            data=st.session_state.rdf_data,
+            file_name="extracted_rdf.ttl",
+            mime='text/turtle'
+        )
+
+# Fungsi yang akan dijalankan ketika tombol konversi Markdown ke RDF ditekan
+def convert_to_rdf():
+    with st.spinner('Sedang melakukan konversi...'):
+        st.session_state.rdf_data = md_rdf(st.session_state.md_result)
+    st.session_state.show_rdf_button = True
+    st.success('Konversi berhasil! Anda sekarang dapat mengunduh RDF.')
+
+# Menampilkan button untuk konversi ke RDF jika hasil ekstraksi sudah ada
+if 'md_result' in st.session_state and st.session_state.md_result is not None:
+    show_markdown_download()
+    if not st.session_state.show_rdf_button:
+        st.button('Konversi Markdown ke RDF', on_click=convert_to_rdf)
+    else:
+        show_rdf_download() 
 
 # Memastikan variabel session state terinisialisasi
 if 'original_nodes' not in st.session_state:
@@ -88,9 +150,10 @@ if 'list_result' not in st.session_state:
 # Fungsi untuk menghapus data
 if st.button("Hapus Data"):
     # Menghapus data dengan menghapus keys dari session state
-    for key in ['nodes', 'edges', 'original_nodes', 'original_edges']:
+    for key in ['nodes', 'edges', 'original_nodes', 'original_edges', 'list_result', 'md_result', 'rdf_data', 'show_rdf_button']:
         if key in st.session_state:
             del st.session_state[key]
+    st.session_state.show_rdf_button = False
     st.rerun() 
 
 # Opsi pemilihan entitas untuk difokuskan
