@@ -162,11 +162,11 @@ selected_nodes = st.sidebar.multiselect("Pilih entitas untuk difokuskan", node_o
 
 # Membuat mapping warna ke tipe informasi node
 color_to_type = {
-    "red": "Kutipan",
-    "yellow": "Sentimen",
-    "green": "5W1H",
-    "black": "Kronologi",
-    None: "Entitas"
+    "red": "Kutipan 🔴",
+    "yellow": "Sentimen 🟡",
+    "green": "5W1H 🟢",
+    "black": "Kronologi ⚫️",
+    None: "Entitas 🔵"
 }
 
 # Membalikkan mapping untuk filtering
